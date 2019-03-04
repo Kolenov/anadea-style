@@ -1,0 +1,48 @@
+.contact-form {
+  &__inner {
+    display: flex;
+  }
+
+  &__file-input {
+    display: none;
+  }
+
+  &__file-label {
+    width: 60px;
+    height: 60px;
+    background: url('/assets/form-clip.png') no-repeat center;
+    cursor: pointer;
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 10px 20px 25px;
+  }
+
+  &__textarea-label {
+    display: block;
+    order: 1;
+    font-size: 18px;
+  }
+
+  &__textarea {
+    order: 2;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    outline: none;
+    resize: none;
+
+    &:focus + label {
+      color: rgb(44, 44, 44);
+    }
+  }
+
+  &__btn {
+    margin: 14px;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+}

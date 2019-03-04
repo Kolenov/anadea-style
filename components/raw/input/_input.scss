@@ -1,0 +1,40 @@
+.input-group {
+  display: flex;
+  position: relative;
+  height: 60px;
+  padding: 20px 10px 18px 25px;
+  border-bottom: 2px solid rgb(236, 236, 236);
+
+  &__label {
+    order: 1;
+    padding-right: 40px;
+    transition: .2s;
+    color: rgb(130, 145, 154);
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  &__input {
+    display: block;
+    box-sizing: border-box;
+    order: 2;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+    font-size: 18px;
+    line-height: 100%;
+
+    &:focus + label {
+      color: rgb(44, 44, 44);
+    }
+  }
+
+  &.error {
+    label {
+      color: rgb(187, 72, 72);
+    }
+  }
+}

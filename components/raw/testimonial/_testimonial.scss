@@ -1,0 +1,41 @@
+.testimonial {
+  padding: 20px 0 70px;
+  border-top: 1px solid currentColor;
+  color: $brand-text;
+
+  &__title {
+    margin-bottom: 7px;
+    color: currentColor;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.25;
+
+    @media (min-width: $grid-breakpoint-sm) {
+      font-size: 14px;
+    }
+
+    @media (min-width: $grid-breakpoint-md-lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 1.25;
+
+    @media (min-width: $grid-breakpoint-sm) {
+      font-size: 14px;
+    }
+
+    @media (min-width: $grid-breakpoint-md-lg) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+$grid-breakpoints: (
+  phone: $grid-breakpoint-xs,
+  tablet: $grid-breakpoint-sm,
+  desktop: $grid-breakpoint-md-lg
+) !default;
+
+$grid-gutter: (
+  phone: 24px,
+  tablet: 24px,
+  desktop: 40px
+) !default;
+
+@function breakpoint-min($size) {
+  $min: map-get($grid-breakpoints, $size);
+
+  @return if($min > 0, $min, null);
+}
+
+@mixin media-query($size) {
+  $min: breakpoint-min($size);
+
+  @if $min != null {
+    @media screen and (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content; // Fallback - no breakpoints defined
+  }
+}
+
+.layout-grid {
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  .grid {
+    display: grid;
+    grid-column-gap: 24px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    margin: 0;
+
+    @each $size in map-keys($grid-breakpoints) {
+      @include media-query($size) {
+        $gutter: map-get($grid-gutter, $size);
+        grid-column-gap: $gutter;
+      }
+    }
+  }
+
+  .cell {
+    grid-column-end: span 12;
+    width: auto;
+  }
+
+  @each $size in map-keys($grid-breakpoints) {
+    @for $span from 1 through 12 {
+      .grid .#{$size}-#{$span} {
+        @include media-query($size) {
+          grid-column-end: span $span;
+        }
+      }
+    }
+
+    @for $span from 0 through 11 {
+      .gid .offset-#{$span},
+      .grid .#{$size}-offset-#{$span} {
+        @include media-query($size) {
+          grid-column-start: $span + 1;
+        }
+      }
+    }
+  }
+}

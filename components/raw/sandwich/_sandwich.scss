@@ -1,0 +1,47 @@
+%sandwich-slice {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  transition: all .2s linear;
+  background-color: currentColor;
+}
+
+.sandwich {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: 25px;
+  height: 17px;
+  transition: all .2s linear;
+  border-bottom: 3px solid currentColor;
+  color: $brand-coldgray-dark20;
+  cursor: pointer;
+
+  &::before {
+    @extend %sandwich-slice;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    @extend %sandwich-slice;
+    top: 50%;
+    left: 0;
+  }
+
+  &.is-open {
+    border-bottom-width: 0;
+
+    &::before {
+      top: 7px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 7px;
+      transform: rotate(-45deg);
+    }
+  }
+}

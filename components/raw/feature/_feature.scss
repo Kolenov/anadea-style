@@ -1,0 +1,57 @@
+.feature {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 32px;
+  padding-top: 32px;
+  border-top: 1px solid currentColor;
+
+  &__mark {
+    display: flex;
+    flex: 1;
+    align-items: baseline;
+    margin-right: 20px;
+    font-size: 0;
+  }
+
+  &__mark &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    color: currentColor;
+    font-size: 40px;
+    letter-spacing: .45px;
+    line-height: 48px;
+    white-space: nowrap;
+  }
+
+  &__mark &__subtitle {
+    padding-right: 4px;
+    opacity: .6;
+    color: currentColor;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  svg {
+    width: 100%;
+    max-width: 48px;
+    height: auto;
+    fill: currentColor;
+  }
+
+  &__icon {
+    width: auto;
+    margin-top: 6px;
+  }
+
+  &__description {
+    flex: 4;
+    margin: 0;
+    color: currentColor;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}

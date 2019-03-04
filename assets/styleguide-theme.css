@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+.swatch-name, .swatch-text {
+  font-family: "Share Tech Mono", "Monaco", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Stem Text";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/stem/STT55.otf) format("opentype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "Stem Text";
+  font-style: italic;
+  font-weight: 400;
+  src: url(/assets/stem/STT56.otf) format("opentype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "Stem Text";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/stem/STT75.otf) format("opentype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "Stem Text";
+  font-style: italic;
+  font-weight: 700;
+  src: url(/assets/stem/STT76.otf) format("opentype");
+  /* Safari, Android, iOS */
+}
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-right: 16px;
+  margin-bottom: 32px;
+}
+.swatch:first-child {
+  margin-left: 0;
+}
+
+.swatch-color {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.swatch-text {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #82919a;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: all;
+}
+.swatch-text::after {
+  display: none;
+}
+
+.swatch-name {
+  padding-top: 8px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.swatch-brand-magenta > .swatch-color {
+  background-color: #dc296c;
+}
+.swatch-brand-magenta > .swatch-text::after {
+  content: "#dc296c";
+}
+
+.swatch-brand-magenta-dark-5 > .swatch-color {
+  background-color: #ca2160;
+}
+.swatch-brand-magenta-dark-5 > .swatch-text::after {
+  content: "#ca2160";
+}
+
+.swatch-brand-magenta-dark-10 > .swatch-color {
+  background-color: #b41e56;
+}
+.swatch-brand-magenta-dark-10 > .swatch-text::after {
+  content: "#b41e56";
+}
+
+.swatch-brand-white > .swatch-color {
+  background-color: #fff;
+}
+.swatch-brand-white > .swatch-text::after {
+  content: "#fff";
+}
+
+.swatch-brand-black > .swatch-color {
+  background-color: #1b1b1b;
+}
+.swatch-brand-black > .swatch-text::after {
+  content: "#1b1b1b";
+}
+
+.swatch-brand-gray-90 > .swatch-color {
+  background-color: #343434;
+}
+.swatch-brand-gray-90 > .swatch-text::after {
+  content: "#343434";
+}
+
+.swatch-brand-gray-80 > .swatch-color {
+  background-color: #4e4e4e;
+}
+.swatch-brand-gray-80 > .swatch-text::after {
+  content: "#4e4e4e";
+}
+
+.swatch-brand-gray-70 > .swatch-color {
+  background-color: #676767;
+}
+.swatch-brand-gray-70 > .swatch-text::after {
+  content: "#676767";
+}
+
+.swatch-brand-gray-60 > .swatch-color {
+  background-color: #818181;
+}
+.swatch-brand-gray-60 > .swatch-text::after {
+  content: "#818181";
+}
+
+.swatch-brand-gray-50 > .swatch-color {
+  background-color: #9a9a9a;
+}
+.swatch-brand-gray-50 > .swatch-text::after {
+  content: "#9a9a9a";
+}
+
+.swatch-brand-gray-40 > .swatch-color {
+  background-color: #b4b4b4;
+}
+.swatch-brand-gray-40 > .swatch-text::after {
+  content: "#b4b4b4";
+}
+
+.swatch-brand-gray-30 > .swatch-color {
+  background-color: #cdcdcd;
+}
+.swatch-brand-gray-30 > .swatch-text::after {
+  content: "#cdcdcd";
+}
+
+.swatch-brand-gray-20 > .swatch-color {
+  background-color: #e7e7e7;
+}
+.swatch-brand-gray-20 > .swatch-text::after {
+  content: "#e7e7e7";
+}
+
+.swatch-brand-gray-15 > .swatch-color {
+  background-color: #f2f2f2;
+}
+.swatch-brand-gray-15 > .swatch-text::after {
+  content: "#f2f2f2";
+}
+
+.swatch-brand-coldgray > .swatch-color {
+  background-color: #82919a;
+}
+.swatch-brand-coldgray > .swatch-text::after {
+  content: "#82919a";
+}
+
+.swatch-brand-coldgray-dark-20 > .swatch-color {
+  background-color: #515d65;
+}
+.swatch-brand-coldgray-dark-20 > .swatch-text::after {
+  content: "#515d65";
+}
+
+.theme-brand {
+  display: flex;
+  align-items: center;
+}
+
+.theme-brand-title {
+  margin-top: 3px;
+  margin-left: 0.5rem;
+}
+
+.theme-brand-logo {
+  height: 2rem;
+}

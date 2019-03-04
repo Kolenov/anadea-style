@@ -1,0 +1,22 @@
+.crew-member {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+
+  &__img {
+    width: 100%;
+    padding-bottom: 23px;
+  }
+
+  &__name {
+    color: #fff;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  &__position {
+    margin-bottom: 0;
+    color: #82919a;
+    font-size: 18px;
+  }
+}

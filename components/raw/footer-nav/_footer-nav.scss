@@ -1,0 +1,44 @@
+.footer-nav {
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__list {
+    @extend %list-unstyled;
+    margin-bottom: 34px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+
+    &.is-tools {
+      grid-column-end: span 2;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 24px;
+
+      @include tablet {
+        grid-column-end: span 1;
+      }
+    }
+  }
+
+  &__item {
+    color: $brand-white;
+
+    br {
+      display: none;
+
+      @include tablet {
+        display: inline;
+      }
+    }
+
+    @at-root .is-tools & {
+      margin-bottom: 6px;
+    }
+  }
+}

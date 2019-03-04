@@ -1,0 +1,55 @@
+.presenter-project {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  background-color: $brand-coldgray;
+
+  &__inner {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      flex-basis: 50%;
+      justify-content: flex-end;
+    }
+
+    @include tablet-landscape {
+      flex-basis: 60%;
+      margin-top: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__caption {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 24px;
+    color: $brand-white;
+
+    @include tablet {
+      flex-basis: 50%;
+      margin-top: auto;
+      padding: 40px;
+    }
+
+    @include tablet-landscape {
+      flex-basis: 40%;
+      margin-top: auto;
+      padding: 75px;
+    }
+  }
+
+  &__subtitle {
+    opacity: .5;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}

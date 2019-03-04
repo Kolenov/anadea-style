@@ -1,0 +1,53 @@
+//
+// Headlines
+//
+
+$h1-line-height: .875;
+$h2-line-height: 1.3;
+$h3-line-height: 1.3125;
+$h4-line-height: 1.25;
+
+%h1,
+h1 {
+  @extend %heading-font-bold;
+  @extend %manual-hyphenation;
+  font-size: 2.5454rem;
+  line-height: $h1-line-height;
+}
+
+%h2,
+h2 {
+  @extend %heading-font-bold;
+  @extend %manual-hyphenation;
+  font-size: 1.8rem;
+  letter-spacing: .45px;
+  line-height: $h2-line-height;
+}
+
+%h3,
+h3 {
+  @extend %heading-font-bold;
+  font-size: 1.4545rem;
+  line-height: $h3-line-height;
+}
+
+%h4,
+h4 {
+  @extend %heading-font-bold;
+  font-size: 1.1rem;
+  letter-spacing: -.5px;
+  line-height: $h4-line-height;
+}
+
+// stylelint-disable scss/selector-no-redundant-nesting-selector
+// Remove links stylings inside headlines
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+
+  > a:not([class]) {
+    @extend %link-unstyled;
+  }
+}

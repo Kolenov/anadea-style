@@ -1,0 +1,33 @@
+.testimonials {
+  background-color: #343434;
+
+  &__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 70px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    & > * {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: .45px;
+      line-height: 52px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+
+    & > * {
+      margin-bottom: 0;
+      color: #cecece;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 36px;
+    }
+  }
+}

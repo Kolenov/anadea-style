@@ -1,0 +1,42 @@
+.project-card-sm {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  max-width: 425px;
+  margin: 0;
+  overflow: hidden;
+  color: $brand-white;
+
+  &__caption {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 60%;
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    color: currentColor;
+    font-size: 9px;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 10px;
+    }
+  }
+
+  &__title {
+    color: currentColor;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 100%;
+
+    @include desktop {
+      font-size: 26px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.office {
+  background-color: #1d1e1f;
+
+  &__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 70px;
+  }
+
+  &__items {
+    display: flex;
+
+    & > div {
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    & > * {
+      color: #fff;
+    }
+  }
+
+  &__text {
+    margin-bottom: 80px;
+
+    & > * {
+      margin-bottom: 0;
+      color: #fff;
+    }
+  }
+}

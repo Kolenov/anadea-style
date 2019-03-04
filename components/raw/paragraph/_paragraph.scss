@@ -1,0 +1,24 @@
+$paragraph-font-size-phone: 16px;
+$paragraph-font-size-desktop: 22px;
+
+$min_width: 320px;
+$max_width: 1300px;
+$min_font: $paragraph-font-size-phone;
+$max_font: $paragraph-font-size-desktop;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+%p,
+p {
+  @extend %body-font-regular;
+  margin-top: 0;
+  margin-bottom: 1.75em;
+  font-size: 1rem;
+  line-height: 1.75;
+
+  &:not([class]) {
+    hyphens: auto;
+  }
+}

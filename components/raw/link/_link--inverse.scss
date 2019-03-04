@@ -1,0 +1,8 @@
+.inverse {
+  $text-color: rgba($brand-gray-30, .5);
+
+  .link,
+  a:not([class]) {
+    color: $text-color;
+  }
+}

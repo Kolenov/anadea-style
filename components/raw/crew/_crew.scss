@@ -1,0 +1,26 @@
+.crew {
+  background-color: #343434;
+
+  &__title {
+    margin-bottom: 20px;
+
+    & > * {
+      color: #fff;
+    }
+  }
+
+  &__text {
+    margin-bottom: 80px;
+
+    & > * {
+      margin-bottom: 0;
+      color: #cecece;
+    }
+  }
+
+  &__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 70px;
+  }
+}

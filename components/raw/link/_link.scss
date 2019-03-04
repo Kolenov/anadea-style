@@ -1,0 +1,29 @@
+$link-color: $brand-interaction;
+$link-hover-color: $brand-hover;
+
+// TODO: move to theme
+@import 'link--inverse';
+
+/* stylelint-disable selector-no-qualifying-type */
+.link,
+a:not([class]) {
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &[href^='mailto'] {
+    hyphens: none;
+  }
+}
+

@@ -1,0 +1,71 @@
+.presenter {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 30px;
+  background-color: $bondi-blue;
+
+  @include tablet {
+    padding: 40px;
+  }
+
+  @include tablet-landscape {
+    flex-direction: row;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 120px 100px;
+  }
+
+  &__caption,
+  &__inner {
+    @include tablet-landscape {
+      width: 50%;
+    }
+  }
+
+  &__caption {
+    @include tablet-landscape {
+      width: 50%;
+    }
+  }
+
+  &__inner {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    @include tablet-landscape {
+      display: block;
+      overflow: visible;
+    }
+  }
+
+  &__title {
+    color: $brand-white;
+
+    @include tablet-landscape {
+      font-size: 2em;
+    }
+  }
+
+  &__text {
+    color: $brand-white;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 30px;
+    object-fit: cover;
+
+    @include tablet {
+      width: auto;
+      object-fit: fill;
+    }
+
+    @include desktop {
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+}

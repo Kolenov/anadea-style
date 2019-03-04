@@ -1,0 +1,65 @@
+.hero {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  max-height: 570px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  overflow: hidden;
+  background-color: transparent;
+
+  @include tablet {
+    max-height: 100vh;
+    padding-bottom: 45px;
+  }
+
+  @include desktop {
+    padding-bottom: 70px;
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-20%, -60%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include tablet-landscape {
+      width: 90%;
+      height: 90%;
+      transform: translate(-10%, -50%);
+    }
+
+    @include desktop {
+      transform: translate(-15%, -50%);
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: currentColor;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include desktop {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+    color: currentColor;
+  }
+}
